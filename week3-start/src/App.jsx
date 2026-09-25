@@ -5,6 +5,8 @@ import WordList from './components/WordList.jsx'
 import { useWordSearch } from './hooks/useWordSearch.js'
 import { WORDS } from './data/words.js'
 
+import RecommendedWords from './components/RecommendedWords.jsx'
+
 // localStorage 는 이 사이트 전체가 공유하는 "하나의 서랍"입니다.
 // 'words' 같은 짧은 이름을 쓰면 다른 라이브러리나 페이지와 부딪힐 수 있습니다.
 // 그래서 앱 이름을 접두사처럼 붙인 키를 씁니다.
@@ -134,6 +136,8 @@ export default function App() {
       ) : (
         <WordList words={words} onDelete={handleDelete} />
       )}
+
+      <RecommendedWords /> 
     </>
   )
 }
