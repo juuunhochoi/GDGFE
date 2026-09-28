@@ -7,7 +7,7 @@ export default function RecommendedWords() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch(`${API_BASE}/api/words`)
+    fetch(`/api/words`)
       .then((r) => r.json())
       .then(setWords)
       .catch((e) => setError(e.message))
